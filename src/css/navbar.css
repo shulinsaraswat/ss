@@ -1,5 +1,5 @@
 .portfolio-nav {
-    background: rgba(255, 255, 255, 0.94);
+    background: rgba(11, 15, 25, 0.88);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(14px);
     padding: 14px 28px;
@@ -26,12 +26,16 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: var(--accent-dark);
+    color: var(--accent);
 }
 
 .navbar-toggler {
     border: 1px solid var(--line);
     border-radius: 6px;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(1.4);
 }
 
 @media(max-width: 768px) {

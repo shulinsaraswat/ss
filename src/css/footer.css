@@ -1,7 +1,8 @@
 #footer {
     align-items: center;
-    background: #101820;
-    color: rgba(255, 255, 255, 0.72);
+    background: #0b0f19;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
     display: flex;
     gap: 18px;
     justify-content: space-between;
@@ -13,7 +14,7 @@
 }
 
 #footer strong {
-    color: #fff;
+    color: var(--ink);
 }
 
 @media (max-width: 768px) {

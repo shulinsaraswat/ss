@@ -1,10 +1,10 @@
 .back-top-button {
     align-items: center;
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(17, 24, 39, 0.88);
     border: 1px solid var(--line);
     border-radius: 50%;
     bottom: 2vh;
-    box-shadow: 0 10px 24px rgba(23, 33, 43, 0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
     color: var(--ink);
     cursor: pointer;
     display: inline-flex;
@@ -25,7 +25,7 @@
 }
 
 .back-top-button:focus-visible {
-    outline: 3px solid rgba(198, 91, 54, 0.3);
+    outline: 3px solid rgba(249, 115, 22, 0.32);
     outline-offset: 2px;
 }
 
