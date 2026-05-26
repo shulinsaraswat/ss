@@ -4,6 +4,9 @@ import '../css/navbar.css';
 
 export default class Navbar extends Component{
     render(){
+        const { theme, onToggleTheme } = this.props;
+        const isLight = theme === 'light';
+
         return(
             <nav className="navbar navbar-expand-lg navbar-light sticky-top portfolio-nav" data-aos="fade-down">
                 <a className="navbar-brand brand-lockup" href="#home" aria-label="Shulin Saraswat home">
@@ -43,6 +46,18 @@ export default class Navbar extends Component{
                             <a className="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
+                    <button
+                        className="theme-toggle"
+                        type="button"
+                        aria-label={`Switch to ${isLight ? 'dark' : 'light'} theme`}
+                        aria-pressed={isLight}
+                        onClick={onToggleTheme}
+                    >
+                        <span className="theme-toggle-track">
+                            <span className="theme-toggle-thumb"></span>
+                        </span>
+                        <span className="theme-toggle-label">{isLight ? 'Light' : 'Dark'}</span>
+                    </button>
                 </div>
             </nav>
         );

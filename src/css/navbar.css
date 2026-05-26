@@ -1,5 +1,5 @@
 .portfolio-nav {
-    background: rgba(11, 15, 25, 0.88);
+    background: var(--nav-background);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(14px);
     padding: 14px 28px;
@@ -38,8 +38,61 @@
     filter: invert(1) brightness(1.4);
 }
 
+[data-theme="light"] .navbar-toggler-icon {
+    filter: none;
+}
+
+.theme-toggle {
+    align-items: center;
+    background: var(--secondary-action-background);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 800;
+    gap: 9px;
+    margin-left: 14px;
+    padding: 7px 10px 7px 8px;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-toggle-track {
+    align-items: center;
+    background: var(--deep-surface);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    display: inline-flex;
+    height: 22px;
+    padding: 2px;
+    width: 42px;
+}
+
+.theme-toggle-thumb {
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    display: block;
+    height: 16px;
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+    width: 16px;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-toggle-thumb {
+    transform: translateX(18px);
+}
+
 @media(max-width: 768px) {
     .portfolio-nav {
         padding: 12px 18px;
+    }
+
+    .theme-toggle {
+        margin: 12px 0 4px;
     }
 }

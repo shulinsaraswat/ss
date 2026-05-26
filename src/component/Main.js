@@ -14,10 +14,12 @@ import Scroll from './BackTopButton';
 
 export default class Main extends Component{
     render(){
+        const { theme, onToggleTheme } = this.props;
+
         return(
             <div className="site-shell">
                 <Scroll showBelow={250} />
-                <Navbar/>
+                <Navbar theme={theme} onToggleTheme={onToggleTheme}/>
                 <Hero/>
                 <AboutMe/>
                 <Education/>

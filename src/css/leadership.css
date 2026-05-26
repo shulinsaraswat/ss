@@ -6,7 +6,7 @@
 
 .leadership-card {
     background:
-        linear-gradient(145deg, var(--paper), rgba(30, 41, 59, 0.9)),
+        linear-gradient(145deg, var(--paper), var(--card-slate)),
         radial-gradient(circle at 88% 14%, rgba(250, 204, 21, 0.12), transparent 24%);
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -15,15 +15,15 @@
 }
 
 .leadership-card:nth-child(2) {
-    background: linear-gradient(145deg, var(--paper), rgba(20, 37, 65, 0.9));
+    background: linear-gradient(145deg, var(--paper), var(--card-blue));
 }
 
 .leadership-card:nth-child(3) {
-    background: linear-gradient(145deg, var(--paper), rgba(30, 41, 59, 0.92));
+    background: linear-gradient(145deg, var(--paper), var(--card-slate-strong));
 }
 
 .leadership-card:nth-child(4) {
-    background: linear-gradient(145deg, var(--paper), rgba(51, 39, 25, 0.82));
+    background: linear-gradient(145deg, var(--paper), var(--card-amber));
 }
 
 .leadership-card span {

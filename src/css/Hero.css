@@ -1,10 +1,5 @@
 .hero-section {
-    background:
-        linear-gradient(120deg, rgba(11, 15, 25, 0.98), rgba(17, 24, 39, 0.94)),
-        radial-gradient(circle at 84% 18%, rgba(59, 130, 246, 0.18), transparent 30%),
-        radial-gradient(circle at 18% 82%, rgba(249, 115, 22, 0.16), transparent 28%),
-        linear-gradient(90deg, rgba(59, 130, 246, 0.11) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(250, 204, 21, 0.045) 1px, transparent 1px);
+    background: var(--hero-background);
     background-size: auto, auto, auto, 64px 64px, 64px 64px;
     min-height: calc(100vh - 70px);
     padding: 82px 24px 64px;
@@ -12,9 +7,7 @@
 }
 
 .hero-section::before {
-    background:
-        linear-gradient(135deg, rgba(59, 130, 246, 0.14), transparent 48%),
-        radial-gradient(circle, rgba(249, 115, 22, 0.2) 0 2px, transparent 3px);
+    background: var(--hero-overlay);
     background-size: auto, 120px 120px;
     content: "";
     inset: 0;
@@ -115,8 +108,8 @@
 }
 
 .hero-portrait-wrap {
-    background: linear-gradient(145deg, rgba(17, 24, 39, 0.96), rgba(30, 41, 59, 0.9));
-    border: 1px solid rgba(51, 65, 85, 0.95);
+    background: var(--hero-frame-background);
+    border: 1px solid var(--hero-frame-border);
     border-radius: 8px;
     box-shadow: 0 24px 64px rgba(23, 33, 43, 0.14);
     overflow: hidden;
@@ -142,8 +135,7 @@
 }
 
 .heroBanner.logo-slide {
-    background:
-        linear-gradient(145deg, rgba(17, 24, 39, 0.96), rgba(30, 41, 59, 0.9));
+    background: var(--hero-frame-background);
     object-fit: contain;
     padding: 56px;
 }
@@ -170,7 +162,7 @@
 }
 
 .hero-carousel-dots span.active {
-    background: var(--accent);
+    background: var(--accent-fade);
     width: 22px;
 }
 
@@ -186,7 +178,7 @@
 
 .lead-down span {
     align-items: center;
-    background: rgba(17, 24, 39, 0.78);
+    background: var(--secondary-action-background);
     border: 1px solid var(--line);
     border-radius: 50%;
     cursor: pointer;

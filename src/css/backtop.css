@@ -1,6 +1,6 @@
 .back-top-button {
     align-items: center;
-    background: rgba(17, 24, 39, 0.88);
+    background: var(--secondary-action-background);
     border: 1px solid var(--line);
     border-radius: 50%;
     bottom: 2vh;
