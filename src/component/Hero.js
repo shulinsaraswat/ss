@@ -1,8 +1,47 @@
 import React, {Component} from 'react';
 import hero from '../images/Shulin.jpg';
+import scb from '../images/SCB.jpg';
+import ibLogo from '../images/IB_Logo.jpg';
 import '../css/Hero.css';
 
+const heroSlides = [
+    {
+        src: hero,
+        alt: 'Shulin Saraswat portrait',
+        type: 'photo',
+    },
+    {
+        src: scb,
+        alt: 'Standard Chartered logo',
+        type: 'photo',
+    },
+    {
+        src: ibLogo,
+        alt: 'Imperial Business School logo',
+        type: 'photo',
+    },
+];
+
 export default class Hero extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeSlide: 0,
+        };
+    }
+
+    componentDidMount() {
+        this.slideTimer = window.setInterval(() => {
+            this.setState(({activeSlide}) => ({
+                activeSlide: (activeSlide + 1) % heroSlides.length,
+            }));
+        }, 3500);
+    }
+
+    componentWillUnmount() {
+        window.clearInterval(this.slideTimer);
+    }
+
     render(){
         return(
             <section id="home" className="hero-section">
@@ -27,7 +66,19 @@ export default class Hero extends Component {
                         </div>
                     </div>
                     <div className="hero-portrait-wrap" data-aos="fade-left" data-aos-delay="150">
-                        <img className="heroBanner" src={hero} alt="Shulin Saraswat portrait"/>
+                        {heroSlides.map((slide, index) => (
+                            <img
+                                className={`heroBanner ${slide.type === 'logo' ? 'logo-slide' : ''} ${index === this.state.activeSlide ? 'active' : ''}`}
+                                src={slide.src}
+                                alt={slide.alt}
+                                key={slide.alt}
+                            />
+                        ))}
+                        <div className="hero-carousel-dots" aria-label="Hero image carousel progress">
+                            {heroSlides.map((slide, index) => (
+                                <span className={index === this.state.activeSlide ? 'active' : ''} key={slide.alt}></span>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <a href="#about">
