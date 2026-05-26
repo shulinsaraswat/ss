@@ -1,30 +1,56 @@
-.list-inline{
-    text-align:center;
-}
-#contact .list-inline a{
-    color:#a2a2a2;
-    padding: 20px;
-    transition: .9s;
-}
-#contact .list-inline a i:hover{
-    transform: scale(1.2);
-    background-image:linear-gradient(45deg, #f3e909, #f05c21);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+.contact-section {
+    background: var(--ink);
+    color: #fff;
 }
 
-@media (min-width: 320.90px) and (max-width: 768.98px){
-    #contact .list-inline a{
-        padding: 14px;
-    }
+.contact-layout {
+    align-items: center;
+    display: grid;
+    gap: 36px;
+    grid-template-columns: 1fr 0.86fr;
 }
 
-@media(max-width:320.98px){
-    #contact .list-inline a{
-        padding: 10px;
+.contact-layout h2 {
+    color: #fff;
+}
+
+.contact-layout p:not(.eyebrow) {
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 18px;
+    max-width: 680px;
+}
+
+.contact-actions {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-actions a {
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-weight: 800;
+    gap: 12px;
+    padding: 16px 18px;
+}
+
+.contact-actions a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.contact-actions i {
+    color: #f2b28f;
+    font-size: 22px;
+    width: 24px;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
     }
 }

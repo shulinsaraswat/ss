@@ -1,0 +1,50 @@
+.leadership-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.leadership-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(23, 33, 43, 0.06);
+    padding: 26px;
+}
+
+.leadership-card span {
+    color: var(--accent);
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.leadership-card h3 {
+    color: var(--ink);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.leadership-org {
+    color: var(--navy);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.leadership-card p:not(.leadership-org) {
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leadership-card {
+        padding: 22px;
+    }
+}

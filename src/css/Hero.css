@@ -1,83 +1,178 @@
-.container{
+.hero-section {
+    background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.96), rgba(245, 247, 249, 0.88)),
+        radial-gradient(circle at 80% 20%, rgba(19, 124, 115, 0.16), transparent 32%);
+    min-height: calc(100vh - 70px);
+    padding: 82px 24px 64px;
     position: relative;
-    text-align: center;
 }
 
-.centered{
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+.hero-inner {
+    align-items: center;
+    display: grid;
+    gap: 56px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.72fr);
+    margin: 0 auto;
+    max-width: 1120px;
 }
 
-.heading-hero{
-    font-family: "Archivo Black", sans-serif;
-    font-weight: normal;
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 0;
-    margin-bottom: -0.25em;
-    background-color: red;
-    background-image:linear-gradient(45deg, #f3e909, #f05c21);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+.hero-copy {
+    max-width: 720px;
 }
 
-.typing{
-    color:white;
+.hero-eyebrow {
+    line-height: 1.55;
+    max-width: 680px;
 }
 
-.lead-down{
-    position: absolute;
-    left: 0;
-    right:0;
+.heading-hero {
+    color: var(--ink);
+    font-size: 68px;
+    font-weight: 820;
+    line-height: 0.98;
+    margin: 0 0 18px;
+}
+
+.typing {
+    color: var(--teal);
+    font-size: 25px;
+    font-weight: 750;
+    min-height: 36px;
+}
+
+.rotating-phrases {
+    display: grid;
+    overflow: hidden;
+    position: relative;
+}
+
+.rotating-phrases span {
+    animation: phrase-rotate 12s infinite;
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.rotating-phrases span:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.rotating-phrases span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.rotating-phrases span:nth-child(4) {
+    animation-delay: 9s;
+}
+
+@keyframes phrase-rotate {
+    0% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    6%,
+    24% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    30%,
+    100% {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+}
+
+.hero-summary {
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.65;
+    margin: 22px 0 28px;
+    max-width: 650px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-portrait-wrap {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.heroBanner {
+    aspect-ratio: 4 / 5;
+    display: block;
+    height: 100%;
+    object-fit: cover;
     width: 100%;
+}
+
+.lead-down {
+    bottom: 24px;
+    color: var(--ink);
+    left: 0;
+    position: absolute;
+    right: 0;
     text-align: center;
-    z-index:10;
-    bottom:15px;
-    color:#fff;
-}
-.lead-down span{
-    cursor:pointer;
-    display:block;
-    margin:0 auto;
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    border:3px solid #fff;
-    text-align:center
-}
-.lead-down i{
-    animation:pulsate 1.5s ease;
-    animation-iteration-count:infinite;
-    padding-top:5px
-}
-@keyframes pulsate{0%{transform:scale(1, 1)}50%{transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}
-
-@media(max-width: 320.98px){
-    .lead-down{
-        display:none;
-    }
-    .heading-hero{
-        font-size: 1.2em;
-    }
-    .typing{
-        font-size: 14px;
-    }
+    z-index: 10;
 }
 
-@media (min-width: 320.90px) and (max-width: 768.98px){
-    .lead-down{
-        display:none;
+.lead-down span {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+
+.lead-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    color: var(--accent);
+}
+
+@keyframes pulsate {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+    100% { transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
     }
-    .heading-hero{
-        font-size: 1.5em;
+
+    .hero-portrait-wrap {
+        max-width: 440px;
     }
-    .typing{
-        font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 62px 18px 74px;
+    }
+
+    .heading-hero {
+        font-size: 44px;
+    }
+
+    .typing {
+        font-size: 20px;
+    }
+
+    .hero-summary {
+        font-size: 17px;
+    }
+
+    .lead-down {
+        display: none;
     }
 }

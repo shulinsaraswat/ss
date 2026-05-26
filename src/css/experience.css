@@ -1,138 +1,85 @@
-* {
-    box-sizing: border-box;
-}
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-.container-exp {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-.container-exp::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -12px;
-    background-color: white;
-    border: 4px solid #f59518;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-.left {
-    left: 0;
-}
-.right {
-    left: 50%;
-  }
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-.right::after {
-    left: -12px;
-}
-.content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
+.experience-list {
+    display: grid;
+    gap: 22px;
 }
 
-.content:hover{
-  box-shadow: 0 2px 4px rgba(0,0,0,0.40);
+.experience-item {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 280px 1fr;
 }
 
-.scbox{
-  border-left-style: solid;
-  border-left-color: #21AA47;
-}
-.tmbox{
-  border-right-style: solid;
-  border-right-color: #e31837;
-}.iotbox{
-  border-left-style: solid;
-  border-left-color: #44a4ee;
+.experience-meta span,
+.experience-meta strong {
+    display: block;
 }
 
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
+.experience-meta span {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
 
-/* Full-width containers */
-  .container-exp {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
+.experience-meta strong {
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.35;
+}
 
-/* Make sure that all arrows are pointing leftwards */
-  .container-exp::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
+.experience-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--teal);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(23, 33, 43, 0.06);
+    padding: 26px;
+}
 
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 19px;
-  }
+.experience-card h3 {
+    color: var(--ink);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
 
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
+.experience-card p,
+.experience-card li {
+    color: var(--muted);
+    line-height: 1.75;
+}
 
-  .scbox{
-    border-left-style: none;
-    border-right-style: solid;
-    border-right-color: #21AA47;
-  }
-  .tmbox{
-    border-right-style: solid;
-    border-right-color: #e31837;
-  }
-  .iotbox{
-    border-left-style: none;
-    border-right-style: solid;
-    border-right-color: #44a4ee;
-  }
+.experience-card p {
+    margin: 0;
+}
+
+.experience-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-card li + li {
+    margin-top: 10px;
+}
+
+.quantbox {
+    border-left-color: var(--teal);
+}
+
+.scbox {
+    border-left-color: #21aa47;
+}
+
+.productbox {
+    border-left-color: var(--accent);
+}
+
+.techbox {
+    border-left-color: #44a4ee;
+}
+
+@media (max-width: 768px) {
+    .experience-item {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,65 +1,37 @@
-.downloadbtn{
-    /* color: #f3e909 ; */
-    color: #f05c21;
-    border-color: #f05c21;
+.resume-layout {
+    align-items: center;
+    display: grid;
+    gap: 44px;
+    grid-template-columns: 320px 1fr;
 }
 
-.downloadbtn:hover{
-    color:#fff;
-    background-color: #f59518;
-    border-color:#f59518;
+.resumeImage {
+    display: block;
+    max-height: 270px;
+    object-fit: contain;
+    width: 100%;
 }
 
-.glLink{
-    text-decoration:none;
-    color: #f05c21
+.resume-copy p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 18px 0 24px;
+    max-width: 680px;
 }
 
-.glLink:hover{
-    text-decoration:none;
-    color: #f3e909;
+.resume-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.resumeImage{
-    height:75%;
-    padding-top:20px;
-    margin-top:30px;
-    margin-left:25px;
-}
-
-.resumeText{
-    line-height:2.0;
-    text-align:left;
-    font-size:17px;
-    padding-bottom:40px;
-}
-
-.downloadButton{
-    margin-top:20px;
-    font-size:20px;
-}
-
-@media (max-width: 320.98px){
-    .resumeText{
-        padding-bottom: 0;
+@media (max-width: 768px) {
+    .resume-layout {
+        grid-template-columns: 1fr;
     }
-    .resumeImage{
-        margin-left: 10px;
-    }
-    .downloadButton{
-        margin-top: 23px;
-        font-size: 13px;
-    }
-}
-@media (min-width: 320.99px) and (max-width: 576.98px){
-    .resumeText{
-        padding-bottom: 0;
-    }
-    .resumeImage{
-        margin-left: 10px;
-    }
-    .downloadButton{
-        margin-top: 23px;
-        font-size: 16px;
+
+    .resumeImage {
+        max-width: 250px;
     }
 }

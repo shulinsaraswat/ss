@@ -1,34 +1,41 @@
-html{
-    scroll-behavior: smooth;
+.portfolio-nav {
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+    padding: 14px 28px;
 }
-.navbar-light .navbar-nav .nav-link{
-    color: #818181;
+
+.brand-lockup {
+    align-items: center;
+    color: var(--ink) !important;
+    display: flex;
+    font-weight: 800;
+    gap: 10px;
 }
-.navbar-light .navbar-nav .selected{
-    background-color: red;
-    background-image:linear-gradient(45deg, #f3e909, #f05c21);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+
+.brand-lockup span {
+    white-space: nowrap;
 }
-.navbar-light .navbar-nav .nav-link:hover{
-    background-color: red;
-    background-image:linear-gradient(45deg, #f3e909, #f05c21);
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 12px;
+    padding-right: 12px;
 }
-.navbar-nav > li{
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: large;
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--accent-dark);
 }
-.navbar-nav>li:hover, .navbar-light .navbar-nav .nav-link:hover {
-    cursor: pointer;
+
+.navbar-toggler {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+@media(max-width: 768px) {
+    .portfolio-nav {
+        padding: 12px 18px;
+    }
 }
