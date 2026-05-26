@@ -3,20 +3,18 @@
   "name": "Shulin Saraswat",
   "icons": [
     {
-      "src": "logo.png",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo.png",
+      "src": "favicon.png",
+      "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "logo.png",
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#17212b",
   "background_color": "#ffffff"
 }
