@@ -12,17 +12,17 @@ export default class Hero extends Component {
                             MSc in Financial Technology @ Imperial College London
                         </p>
                         <h1 className="heading-hero">Shulin Saraswat</h1>
-                        <h2 className="typing rotating-phrases" aria-label="Quantitative engineer, fintech builder, full-stack developer, product-minded technologist">
+                        <h2 className="typing rotating-phrases" aria-label="Financial technology graduate student, quantitative engineer, ex banking full-stack engineer, markets and data enthusiast">
+                            <span>Financial Technology graduate student</span>
                             <span>Quantitative engineer</span>
-                            <span>FinTech builder</span>
-                            <span>Full-stack developer</span>
-                            <span>Product-minded technologist</span>
+                            <span>Ex banking full-stack engineer</span>
+                            <span>Markets, data &amp; product strategy</span>
                         </h2>
                         <p className="hero-summary">
-                            I build reliable digital systems across cloud platforms, web applications, and IoT products, with a bias for practical architecture and crisp user experiences.
+                            I build data-driven financial technology systems across quant research infrastructure, banking platforms, cloud architecture, and product-focused engineering.
                         </p>
                         <div className="hero-actions">
-                            <a className="btn primary-action" href="#community">View Initiatives</a>
+                            <a className="btn primary-action" href="#experience">View Experience</a>
                             <a className="btn secondary-action" href="#contact">Get in Touch</a>
                         </div>
                     </div>

@@ -12,10 +12,10 @@ export default class Project extends Component{
                     </div>
                     <div className="initiative-grid">
                         <article className="initiative-card" data-aos="fade-up">
-                            <span className="initiative-label">IoThinC</span>
+                            <span className="initiative-label">IoThinC - VIT</span>
                             <h3>Co-Founder</h3>
                             <p>
-                                Co-founded an IoT and innovation-focused student community aimed at fostering technical learning, experimentation, and collaborative problem-solving.
+                                Co-founded an IoT and innovation-focused student community at VIT, Vellore aimed at fostering technical learning, experimentation, and collaborative problem-solving.
                             </p>
                             <p>
                                 Led initiatives including technical workshops, innovation discussions, and hands-on learning activities that encouraged students to explore emerging technologies and practical IoT applications.

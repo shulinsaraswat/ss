@@ -16,7 +16,7 @@ export default class Experience extends Component{
                                 <span>Oct 2025 - Present</span>
                                 <strong>Imperial Business School Student Investment Fund</strong>
                             </div>
-                            <div className="experience-card quantbox">
+                            <div className="experience-card">
                                 <h3>Quantitative Engineer</h3>
                                 <ul>
                                     <li>Building production-grade data infrastructure and research tooling, including DataHub and a Research Toolkit, for systematic strategy development.</li>
@@ -29,7 +29,7 @@ export default class Experience extends Component{
                                 <span>Apr 2024 - Aug 2025</span>
                                 <strong>Standard Chartered</strong>
                             </div>
-                            <div className="experience-card scbox">
+                            <div className="experience-card">
                                 <h3>Senior Analyst, Development</h3>
                                 <ul>
                                     <li>Led ATOM-Service Bench integration, improving workflow efficiency and reducing end-to-end processing latency by approximately 40% across financial operations.</li>
@@ -43,7 +43,7 @@ export default class Experience extends Component{
                                 <span>Apr 2023 - Mar 2024</span>
                                 <strong>Standard Chartered</strong>
                             </div>
-                            <div className="experience-card productbox">
+                            <div className="experience-card">
                                 <h3>Senior Developer</h3>
                                 <ul>
                                     <li>Re-architected and modernised ATOM's user interface using React and EmberJS, reducing load times by 30% and improving usability for 200+ daily users.</li>
@@ -57,7 +57,7 @@ export default class Experience extends Component{
                                 <span>Sep 2020 - Mar 2023</span>
                                 <strong>Standard Chartered</strong>
                             </div>
-                            <div className="experience-card techbox">
+                            <div className="experience-card">
                                 <h3>Developer - Technology &amp; Innovation</h3>
                                 <ul>
                                     <li>Migrated a legacy monolithic financial platform to AWS-based microservices, improving scalability, resilience, and infrastructure efficiency.</li>

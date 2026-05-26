@@ -8,9 +8,9 @@ export default class Contact extends Component{
                 <div className="section-container contact-layout">
                     <div>
                         <p className="eyebrow">Contact</p>
-                        <h2>Let us build something useful.</h2>
+                        <h2>Let us talk finance, data, and technology.</h2>
                         <p>
-                            I am always open to meaningful engineering conversations, collaboration, and opportunities around cloud, IoT, and product-minded software work.
+                            I am open to conversations around quantitative research infrastructure, fintech product development, investment technology, and engineering roles where financial insight and robust systems thinking come together.
                         </p>
                     </div>
                     <div className="contact-actions">
