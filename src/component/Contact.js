@@ -4,29 +4,35 @@ import '../css/contact.css';
 export default class Contact extends Component{
     render(){
         return(
-            <div id="contact" style={{paddingBottom:'17px'}} data-aos="fade-up"><br/>
-                <h2 style={{textAlign:'center'}}>CONTACT ME</h2>
-                <hr style={{width:'8%', color:'#f05c21', backgroundColor:'#f05c21'}}></hr><br/>
-                <div className="container icons">
-                    <ul className="list-inline">
-                        <li className="list-inline-item">
-                            <a href="https://www.linkedin.com/in/shulinsaraswat/" target="_blank"><i className="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="https://github.com/shulinsaraswat" target="_blank"><i className="fa fa-2x fa-github"></i></a>
-                        </li>            
-                        <li className="list-inline-item">
-                            <a href="mailto: shulin59@outlook.com" target="_blank"><i className="fa fa-2x fa-envelope"></i></a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="https://www.quora.com/profile/Shulin-Saraswat-2" target="_blank"><i className="fa fa-2x fa-quora"></i></a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="https://shulinsaraswat.github.io/canonshuttershots/" target="_blank"><i class="fa fa-2x fa-desktop"></i></a>
-                        </li>
-                    </ul>
+            <section id="contact" className="section contact-section" data-aos="fade-up">
+                <div className="section-container contact-layout">
+                    <div>
+                        <p className="eyebrow">Contact</p>
+                        <h2>Let us build something useful.</h2>
+                        <p>
+                            I am always open to meaningful engineering conversations, collaboration, and opportunities around cloud, IoT, and product-minded software work.
+                        </p>
+                    </div>
+                    <div className="contact-actions">
+                        <a href="mailto:shulin59@outlook.com" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-envelope" aria-hidden="true"></i>
+                            Email
+                        </a>
+                        <a href="https://www.linkedin.com/in/shulinsaraswat/" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/shulinsaraswat" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-github" aria-hidden="true"></i>
+                            GitHub
+                        </a>
+                        <a href="https://shulinsaraswat.github.io/canonshuttershots/" target="_blank" rel="noopener noreferrer">
+                            <i className="fa fa-camera" aria-hidden="true"></i>
+                            Photography
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </section>
         );
     }
 }

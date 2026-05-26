@@ -1,66 +1,34 @@
-import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import IconButton from '@material-ui/core/IconButton';
+import React, { useEffect, useState } from 'react';
+import '../css/backtop.css';
 
-const useStyles = makeStyles((theme) => ({
-    toTop: {
-        zIndex: 2,
-        position: 'fixed',
-        bottom: '2vh',
-        backgroundColor: '#DCDCDC',
-        color: 'black',
-        "&:hover, &.Mui-focusVisible": {
-            transition: '0.3s',
-            color: '#f05c21',
-            backgroundColor: '#DCDCDC'
-        },
-        [theme.breakpoints.up('xs')]: {
-            right: '5%',
-            backgroundColor: 'rgb(220,220,220,0.7)',
-        },
-        [theme.breakpoints.up('lg')]: {
-            right: '4.5%',
-        },
-    }
-})
-)
-
-const Scroll = ({
-    showBelow,
-}) => {
-
-    const classes = useStyles();
-
-    const [show, setShow] = useState(showBelow ? false : true)
-
-    const handleScroll = () => {
-        if (window.pageYOffset > showBelow) {
-            if (!show) setShow(true)
-        } else {
-            if (show) setShow(false)
-        }
-    }
-
-    const handleClick = () => {
-        window[`scrollTo`]({ top: 0, behavior: `smooth` })
-    }
+const Scroll = ({ showBelow }) => {
+    const [show, setShow] = useState(showBelow ? false : true);
 
     useEffect(() => {
+        const handleScroll = () => {
+            setShow(window.pageYOffset > showBelow);
+        };
+
         if (showBelow) {
-            window.addEventListener(`scroll`, handleScroll)
-            return () => window.removeEventListener(`scroll`, handleScroll)
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+            return () => window.removeEventListener('scroll', handleScroll);
         }
-    })
+    }, [showBelow]);
+
+    const handleClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    if (!show) {
+        return null;
+    }
 
     return (
-        <div>
-            {show &&
-                <IconButton onClick={handleClick} className={classes.toTop} aria-label="to top" component="span">
-                    <ExpandLessIcon />
-                </IconButton>
-            }
-        </div>
-    )
+        <button className="back-top-button" onClick={handleClick} type="button" aria-label="Back to top">
+            <i className="fa fa-chevron-up" aria-hidden="true"></i>
+        </button>
+    );
 }
-export default Scroll
+
+export default Scroll;

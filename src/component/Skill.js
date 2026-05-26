@@ -1,56 +1,100 @@
 import React, {Component} from 'react';
-import htmllogo from '../images/html.png'; 
-import csslogo from '../images/css-3.png'; 
-import javalogo from '../images/java.png';
-import postgreslogo from '../images/Postgresql.png';
-import awslogo from '../images/aws.png';
-import jslogo from '../images/jslogo.png';
 import '../css/skill.css';
 
 export default class Skill extends Component{
     render(){
         return(
-            // Skill BEGIN
-            <div id="skill" style={{paddingBottom:'17px'}} data-aos="fade-up"><br/>
-                <h2 style={{textAlign:'center'}}>MY SKILLS</h2>
-                <hr style={{width:'8%', color:'#f05c21', backgroundColor:'#f05c21'}}></hr><br/>
-                <div className="container">
-                    <p style={{lineHeight:'2.0'}}>An almost indispensable skill for any successful person is the ability to pose the right question before trying to find answers to it.
-                        Aside from the <i>leadership skills, time management skills, problem solving skills, inter personal skills;</i> some of the notable skillset which I have cultivated up throughout my time in school and college are mentioned henceforth.
-                    </p><br/>
-                    <div data-aos="fade-up">
-                    <div className="row" style={{paddingBottom:'40px'}} >
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={htmllogo} alt="html logo"/>
-                            <p style={{marginTop:'5px'}}><b>HTML</b></p>
-                        </div>
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={csslogo} alt="css logo"/>
-                            <p style={{marginTop:'5px'}}><b>CSS</b></p>
-                        </div>
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={javalogo} alt="java logo"/>
-                            <p style={{marginTop:'5px'}}><b>Java</b></p>
-                        </div>
+            <section id="skill" className="section section-muted" data-aos="fade-up">
+                <div className="section-container">
+                    <div className="section-heading">
+                        <p className="eyebrow">Skills</p>
+                        <h2>A toolkit spanning quantitative analysis, financial technology, product delivery, and scalable engineering.</h2>
                     </div>
-                    <div className="row">
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={jslogo} alt="java script logo"/>
-                            <p style={{marginTop:'5px'}}><b>Java Script</b></p>
+                    <div className="skills-layout">
+                        <div className="skill-narrative">
+                            <h3>Core strengths</h3>
+                            <p>
+                                I combine financial domain knowledge with hands-on engineering experience across data systems, APIs, cloud platforms, and product delivery. My work is strongest where robust technical implementation supports better analysis, automation, and decision-making.
+                            </p>
+                            <div className="skill-tags">
+                                <span>Quant research tooling</span>
+                                <span>Financial systems</span>
+                                <span>Data pipelines</span>
+                                <span>Cloud architecture</span>
+                                <span>Agile delivery</span>
+                            </div>
                         </div>
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={postgreslogo} alt="postgres logo"/>
-                            <p style={{marginTop:'5px'}}><b>PostgreSQL</b></p>
+                        <div className="skill-category-grid" data-aos="fade-up">
+                            <article className="skill-category-card">
+                                <h3>Finance &amp; Quant</h3>
+                                <div className="skill-pill-list">
+                                    <span>Market Data Analysis</span>
+                                    <span>Backtesting</span>
+                                    <span>Financial Modelling</span>
+                                    <span>Portfolio Analytics</span>
+                                    <span>Systematic Trading</span>
+                                </div>
+                            </article>
+                            <article className="skill-category-card">
+                                <h3>Programming &amp; Data</h3>
+                                <div className="skill-pill-list">
+                                    <span>Python</span>
+                                    <span>NumPy</span>
+                                    <span>Pandas</span>
+                                    <span>scikit-learn</span>
+                                    <span>statsmodels</span>
+                                    <span>SQL</span>
+                                    <span>Java</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </article>
+                            <article className="skill-category-card">
+                                <h3>Engineering Systems</h3>
+                                <div className="skill-pill-list">
+                                    <span>Spring Boot</span>
+                                    <span>React JS</span>
+                                    <span>Ember JS</span>
+                                    <span>REST APIs</span>
+                                    <span>GraphQL</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Microservices</span>
+                                </div>
+                            </article>
+                            <article className="skill-category-card">
+                                <h3>Cloud &amp; Infrastructure</h3>
+                                <div className="skill-pill-list">
+                                    <span>AWS</span>
+                                    <span>AWS Certified Cloud Practitioner</span>
+                                    <span>Data Pipelines</span>
+                                    <span>Research Infrastructure</span>
+                                    <span>Query Optimisation</span>
+                                </div>
+                            </article>
+                            <article className="skill-category-card">
+                                <h3>Product &amp; Delivery</h3>
+                                <div className="skill-pill-list">
+                                    <span>Agile/Scrum</span>
+                                    <span>Agile Product Management</span>
+                                    <span>Jira</span>
+                                    <span>ADO</span>
+                                    <span>Confluence</span>
+                                    <span>Stakeholder Management</span>
+                                </div>
+                            </article>
+                            <article className="skill-category-card">
+                                <h3>Certifications &amp; Tools</h3>
+                                <div className="skill-pill-list">
+                                    <span>Bloomberg Market Concepts</span>
+                                    <span>Bloomberg ESG</span>
+                                    <span>Bloomberg Finance Fundamentals</span>
+                                    <span>MS Excel</span>
+                                    <span>PowerPoint</span>
+                                </div>
+                            </article>
                         </div>
-                        <div className="col-4 col-12-medium">
-                            <img className="popup" src={awslogo} alt="aws logo"/>
-                            <p style={{marginTop:'5px'}}><b>AWS</b></p>
-                        </div>
-                    </div>
                     </div>
                 </div>
-            </div>
-            // Skill END
+            </section>
         );
     }
 }
